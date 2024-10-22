@@ -1,0 +1,184 @@
+/* Fonts */
+/* Title Font */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+/* Body Font */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+/* Fonts & Colors */
+:root {
+    --title-font: 'Playwrite GB S', sans-serif;
+    --body-font: 'Josefin Sans', sans-serif;
+    --background-basic: #ffe4c4;
+    --primary-color: #231078;
+    --secondary-color: #3418b3;
+    --tertiary-color: #ffc074;
+    --forth-color: #f7b25e;
+    --container-color: #fdd6a6; 
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --delete-button-color: #930000;
+    --shadow-color: #23107880;
+}
+/* Global */
+
+body {
+    background-color: var(--background-basic);
+    font-family: var(--body-font);
+}
+
+/* Logo */
+
+.title {
+    display: inline-block;
+    font-family: var(--title-font);
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.logo {
+    display: inline-block;
+    gap: 30px;
+}
+
+.logo i {
+    size: 1.5rem;
+    color: var(--black-color);
+}
+
+.logo i:hover {
+    color: var(--secondary-color);
+}
+
+.container {
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px dotted var(--primary-color);
+    border-radius: 10px;
+    border-width: 2px;
+    padding: 20px;
+    background-color: var(--container-color);
+    box-shadow: 0px 10px 10px var(--shadow-color);
+}
+
+/* Main */
+
+.input-task {
+    width: 400px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    border-left: 6px solid var(--primary-color);
+    border-right: 6px solid var(--primary-color);
+    font-family: josefin sans, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--tertiary-color);
+    color: var(--black-color);
+    box-shadow: 0px 5px 5px var(--shadow-color);
+}
+
+.addButton {
+    width: 400px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--forth-color);
+    color: var(--black-color);
+    border: none;
+    border-radius: 8px;
+    border-left: 6px solid var(--primary-color);
+    border-right: 6px solid var(--primary-color);
+    cursor: pointer;
+    font-family: josefin sans, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.addButton:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    transition: 0.5s ease-out;
+}
+
+/* List elements */
+
+.taskContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8px;
+    width: 400px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    border-left: 6px solid var(--primary-color);
+    border-right: 6px solid var(--primary-color);
+    background-color: var(--forth-color);
+}
+
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+    padding: 0%;
+}
+
+.todo-list li .deleteButton {
+    color: var(--black-color);
+    cursor: pointer;    
+}
+
+.todo-list li .deleteButton:hover {
+    color: var(--delete-button-color);
+    transition: transform 0.5s ease-out;
+    transform: scale(150%);    
+}
+
+.taskText {
+    color: red;
+}
+
+/* checkbox style */
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+input[type="checkbox"]:checked {
+    accent-color: var(--secondary-color);
+    transition: transform 0.5s ease-out;
+    transform: scale(150%);    
+}
+
+
+/*footer*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-social a {
+    font-size: 1.5rem;
+    color: var(--black-color);
+}
+
+.footer-social a:hover {
+    color: var(--secondary-color);
+    transition: transform 0.5s ease-out;
+    transform: translateY(-8px) scale(150%);
+}
